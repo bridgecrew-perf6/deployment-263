@@ -15,6 +15,9 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install certbot
 
+# clone cerberus - our authentication service
+git clone https://github.com/uiuc-quant/cerberus.git
+
 # make a certificate
 sudo certbot certonly --standalone -d blog.uiucquant.web.illinois.edu
 
