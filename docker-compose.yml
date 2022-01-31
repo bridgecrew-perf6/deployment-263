@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
     environment:
-      url: https://blog.uiucquant.web.illinois.edu
+      url: https://ec2-3-145-32-197.us-east-2.compute.amazonaws.com
       database__client: mysql
       database__connection__host: db
       database__connection__user: root
