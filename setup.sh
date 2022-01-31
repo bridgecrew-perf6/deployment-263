@@ -8,3 +8,7 @@ sudo apt install docker-compose
 
 # make nginx html directory
 sudo mkdir -p /usr/share/nginx/html
+
+
+
+sudo docker-compose up
