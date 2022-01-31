@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+
+
+  ghost:
+    image: ghost:4
+    restart: always
+    depends_on:
+      - db
+    environment:
+      url: https://blog.uiucquant.web.illinois.edu
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: example
+      database__connection__database: ghost
+    volumes:
+      - ./data/ghost/:/var/lib/ghost/content
