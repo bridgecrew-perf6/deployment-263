@@ -2,6 +2,12 @@ version: "3.1"
 
 services:
 
+  cerberus:
+    build: "./cerberus"
+    restart: always
+    env_file:
+      - ./cerberus/.env
+
 
   ghost:
     image: ghost:4
