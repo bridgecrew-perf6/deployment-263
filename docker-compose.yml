@@ -32,3 +32,20 @@ services:
     restart: always
     ports:
       - 8085:8080
+
+  
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - ghost
+      - adminer
+      - db
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+       - /etc/letsencrypt/:/etc/letsencrypt/
+       - /usr/share/nginx/html:/usr/share/nginx/html
