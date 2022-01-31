@@ -41,6 +41,6 @@ mkdir ./data/mariadb
 mkdir ./data/mysql
 
 # make a certificate
-sudo certbot certonly --standalone -d blog.uiucquant.web.illinois.edu
+sudo certbot certonly --standalone -d ec2-3-145-32-197.us-east-2.compute.amazonaws.com
 
 sudo docker-compose up
