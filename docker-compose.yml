@@ -55,6 +55,31 @@ services:
     ports:
       - 8085:8080
 
+  nextcloud:
+    image: nextcloud
+    restart: always
+    ports:
+      - 9005:80
+    volumes:
+      - "./data/nextcloud:/var/www/html"
+    environment:
+      - MYSQL_PASSWORD=example
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_HOST=mariadb
+  
+
+  mariadb:
+    image: mariadb
+    restart: always
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-file-per-table=1 --skip-innodb-read-only-compressed
+    volumes:
+       - "./data/mariadb:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_PASSWORD=example
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
   
   nginx:
     build:
