@@ -18,6 +18,9 @@ sudo apt install certbot
 # clone cerberus - our authentication service
 git clone https://github.com/uiuc-quant/cerberus.git
 
+# copy over cerberus auth template to regular.
+cp ./cerberus/.env.example ./cerberus/.env
+
 # make data directory
 mkdir ./data;
 
