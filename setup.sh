@@ -18,6 +18,15 @@ sudo apt install certbot
 # clone cerberus - our authentication service
 git clone https://github.com/uiuc-quant/cerberus.git
 
+# make data directory
+mkdir ./data;
+
+# make ghost data directory
+mkdir ./data/ghost;
+
+# for mysql
+mkdir ./data/mysql
+
 # make a certificate
 sudo certbot certonly --standalone -d blog.uiucquant.web.illinois.edu
 
