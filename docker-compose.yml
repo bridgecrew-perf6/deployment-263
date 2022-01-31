@@ -17,3 +17,18 @@ services:
       database__connection__database: ghost
     volumes:
       - ./data/ghost/:/var/lib/ghost/content
+
+  
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8085:8080
