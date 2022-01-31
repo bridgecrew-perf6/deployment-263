@@ -6,3 +6,5 @@ sudo apt-get update
 sudo apt install docker.io
 sudo apt install docker-compose
 
+# make nginx html directory
+sudo mkdir -p /usr/share/nginx/html
