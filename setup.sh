@@ -24,6 +24,16 @@ mkdir ./data;
 # make ghost data directory
 mkdir ./data/ghost;
 
+# make mongodb data directory
+mkdir ./data/mongo
+
+# make nextcloud data directory
+mkdir ./data/nextcloud
+
+# make mariadb data directory
+mkdir ./data/mariadb
+
+
 # for mysql
 mkdir ./data/mysql
 
